@@ -1,4 +1,4 @@
-let tinyl18n = {
+let tinyi18n = {
 	translate: function(language) {
 		for (let i = 0; i < translate_elements.length; i++) {
 			key = translate_elements[i].getAttribute('data-translatekey')
@@ -19,7 +19,7 @@ let tinyl18n = {
 				language = data.default_language || 'en'
 				translate_elements = document.querySelectorAll('[' + 'data-translatekey' + ']') // Get all elements with a translate key
 
-				tinyl18n.translate(language)
+				tinyi18n.translate(language)
 			}
 		}
 
