@@ -1,0 +1,14 @@
+{
+	"default_language": "es",
+	"languages": ["en", "es"],
+	"translations": {
+		"title": {
+			"en": "Title in English",
+			"es": "Título en Inglés"
+		},
+		"description": {
+			"en": "I like cats",
+			"es": "Me gustan los gatos"
+		}
+	}
+}
