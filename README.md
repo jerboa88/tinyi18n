@@ -9,7 +9,7 @@ A tiny javascript library for internationalization and easy switching of languag
 > **Note:** This is an experimental project at the moment. Use at your own risk
 
 ## Usage
-1. Include `tinyi18n.js` before the closing body tag in your page and call `tinyi18n.loadTranslations('translations.json')` with the name of your JSON file to load it. Put the `data-translatekey` attribute on any block of text you want to have multiple languages. The value of this attribute is essentially an id for the block of text so you can write translations for it. You can use the same value for multiple blocks of text.
+1. Include `tinyi18n.js` before the closing body tag in your page and call `tinyi18n.loadTranslations('translations.json')` with the name of your JSON file to load it. Put the `data-translatekey` attribute on any block of text you want to have multiple languages. The value of this attribute is essentially an id for the block of text so you can write translations for it. You can use the same value for multiple blocks of text. For non-text elements, also add the `data-translateattribute` to specify which attribute you want to have translations for.
 
 ##### index.html
 ```html
@@ -21,6 +21,9 @@ A tiny javascript library for internationalization and easy switching of languag
   <body>
     <h1 data-translatekey="title"></h1>
     <p data-translatekey="description"></p>
+
+    <input type="text" data-translatekey="searchbox" data-translateattribute="value"></input>
+
     <script src="tinyi18n.js"></script>
     <script>
       tinyi18n.loadTranslations('translations.json')
@@ -29,7 +32,7 @@ A tiny javascript library for internationalization and easy switching of languag
 </html>
 ```
 
-2. Create your translations as shown below with multiple languages listed for each key. Make sure to include `default_language` and `languages` for the module to work properly
+2. Create your translations as shown below with multiple languages listed for each key. Make sure to include `default_language` and `languages` for the module to work properly.
 ##### translations.json
 ```json
 {
@@ -43,6 +46,10 @@ A tiny javascript library for internationalization and easy switching of languag
     "description": {
       "en": "I like cats",
       "es": "Me gustan los gatos"
+    },
+    "searchbox": {
+      "en": "search",
+      "es": "buscar"
     }
   }
 }
@@ -59,8 +66,11 @@ A tiny javascript library for internationalization and easy switching of languag
   <body>
     <h1 data-translatekey="title"></h1>
     <p data-translatekey="description"></p>
-    <button onclick="tinyi18n.translate('en')">Translate to English</button>
-    <button onclick="tinyi18n.translate('es')">Traducir al inglés</button>
+    <input type="text" data-translatekey="searchbox" data-translateattribute="value"></input>
+
+    <button onclick="tinyi18n.setLang('en')">Translate to English</button>
+    <button onclick="tinyi18n.setLang('es')">Traducir al inglés</button>
+
     <script src="tinyi18n.js"></script>
     <script>
       tinyi18n.loadTranslations('translations.json')
@@ -68,6 +78,16 @@ A tiny javascript library for internationalization and easy switching of languag
   </body>
 </html>
 ```
+
+
+## Functions
+- `loadTranslations('translations.json')`: Loads JSON file with translations. Takes a filename as input
+- `getLang()`: Get the current language of the page according to tinyi18n
+- `setLang('en')`: Changes the page language to a specified language. Takes a language string as input
+
+## Attributes
+- `data-translatekey="title"`: Use this on every text element you want to translate. Choose a different key for every element and add the translations for your keys in your JSON file
+- `data-translateattribute="value"`: Use this on non-text elements where you need to have translated text for an attribute value (ex. value attribute for input elements)
 
 
 ## Contributing

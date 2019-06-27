@@ -6,11 +6,18 @@
 	<body>
 		<h1 data-translatekey="title"></h1>
 		<p data-translatekey="description"></p>
-		<button onclick="tinyi18n.translate('en')">Translate to English</button>
-		<button onclick="tinyi18n.translate('es')">Traducir al inglés</button>
+		<input type="text" data-translatekey="searchbox" data-translateattribute="value"></input>
+
+		<button onclick="tinyi18n.setLang('en')">Translate to English</button>
+		<button onclick="tinyi18n.setLang('es')">Traducir al inglés</button><br>
+
+		<output id="initial_language"></output>
+
 		<script src="tinyi18n.js"></script>
 		<script>
 			tinyi18n.loadTranslations('translations.json')
+
+			document.getElementById('initial_language').innerHTML = tinyi18n.getLang()
 		</script>
 	</body>
 </html>
