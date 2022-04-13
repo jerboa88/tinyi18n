@@ -1,10 +1,22 @@
-# tinyi18n [JS Library]
-![](https://img.shields.io/badge/type-JS_Library-brightgreen.svg "Project type")
-![](https://img.shields.io/github/repo-size/jerboa88/tinyi18n.svg "Repository size")
-[![](https://img.shields.io/github/license/jerboa88/tinyi18n.svg "Project license")](LICENSE)
+<!-- Project Header -->
+<div align="center"> 
+  <h1 class="projectName">tinyi18n</h1>
 
-
-A tiny javascript library for internationalization and easy switching of languages on HTML pages
+  <p class="projectBadges">
+    <img src="https://img.shields.io/badge/type-JS_Library-4caf50.svg" alt="Project type" title="Project type">
+    <img src="https://img.shields.io/github/languages/top/jerboa88/tinyi18n.svg" alt="Language" title="Language">
+    <img src="https://img.shields.io/github/repo-size/jerboa88/tinyi18n.svg" alt="Repository size" title="Repository size">
+    <a href="LICENSE">
+      <img src="https://img.shields.io/github/license/jerboa88/tinyi18n.svg" alt="Project license" title="Project license"/>
+    </a>
+  </p>
+  
+  <p class="projectDesc">
+    A tiny javascript library for internationalization and easy switching of languages on HTML pages
+  </p>
+  
+  <br/>
+</div>
 
 > **Note:** This is an experimental project at the moment. Use at your own risk
 
