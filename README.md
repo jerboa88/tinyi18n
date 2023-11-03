@@ -18,7 +18,8 @@
   <br/>
 </div>
 
-> **Note:** This is an experimental project at the moment. Use at your own risk
+> [!NOTE]
+> This is an experimental project at the moment. Use at your own risk
 
 ## Usage
 1. Include `tinyi18n.js` before the closing body tag in your page and call `tinyi18n.loadTranslations('translations.json')` with the name of your JSON file to load it. Put the `data-translatekey` attribute on any block of text you want to have multiple languages. The value of this attribute is essentially an id for the block of text so you can write translations for it. You can use the same value for multiple blocks of text. For non-text elements, also add the `data-translateattribute` to specify which attribute you want to have translations for.
