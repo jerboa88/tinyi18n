@@ -11,7 +11,7 @@
     </a>
   </p>
   
-  <p class="projectDesc" data-exposition="A tiny JavaScript library for internationalization and easy switching of languages on HTML pages. Despite this being one of my first experiences designing a library, this project is still perfectly functional for small projects.">
+  <p class="projectDesc">
     A tiny JavaScript library for internationalization and easy switching of languages on HTML pages
   </p>
   
