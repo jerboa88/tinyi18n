@@ -3,6 +3,7 @@
   <h1 class="projectName">tinyi18n</h1>
 
   <p class="projectBadges">
+    <img src="https://img.shields.io/badge/Experimental-%E2%9A%A0%EF%B8%8E-ca8a04.svg" alt="Experimental" title="Experimental"/>
     <img src="https://johng.io/badges/category/Library.svg" alt="Project category" title="Project category">
     <img src="https://img.shields.io/github/languages/top/jerboa88/tinyi18n.svg" alt="Language" title="Language">
     <img src="https://img.shields.io/github/repo-size/jerboa88/tinyi18n.svg" alt="Repository size" title="Repository size">
@@ -18,8 +19,8 @@
   <br/>
 </div>
 
-> [!NOTE]
-> This is an experimental project at the moment. Use at your own risk
+> [!WARNING]
+> This is an experimental or POC project. It may contain bugs or incomplete features, and is not intended for production use. Breaking changes may be made at any time. Consider more stable alternatives for critical applications.
 
 ## Usage
 1. Include `tinyi18n.js` before the closing body tag in your page and call `tinyi18n.loadTranslations('translations.json')` with the name of your JSON file to load it. Put the `data-translatekey` attribute on any block of text you want to have multiple languages. The value of this attribute is essentially an id for the block of text so you can write translations for it. You can use the same value for multiple blocks of text. For non-text elements, also add the `data-translateattribute` to specify which attribute you want to have translations for.
