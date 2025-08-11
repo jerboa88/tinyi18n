@@ -20,9 +20,21 @@
 </div>
 
 > [!WARNING]
-> This is an experimental or POC project. It may contain bugs or incomplete features, and is not intended for production use. Breaking changes may be made at any time. Consider more stable alternatives for critical applications.
+> This is an currently an experimental project or proof-of-concept. It may contain bugs or incomplete features, and is not intended for production use. Breaking changes may be made at any time. Consider more stable alternatives for critical applications.
 
-## Usage
+
+## 👋 About
+
+### Functions
+- `loadTranslations('translations.json')`: Loads JSON file with translations. Takes a filename as input
+- `getLang()`: Get the current language of the page according to tinyi18n
+- `setLang('en')`: Changes the page language to a specified language. Takes a language string as input
+
+### Attributes
+- `data-translatekey="title"`: Use this on every text element you want to translate. Choose a different key for every element and add the translations for your keys in your JSON file
+- `data-translateattribute="value"`: Use this on non-text elements where you need to have translated text for an attribute value (ex. value attribute for input elements)
+
+## 🕹️ Usage
 1. Include `tinyi18n.js` before the closing body tag in your page and call `tinyi18n.loadTranslations('translations.json')` with the name of your JSON file to load it. Put the `data-translatekey` attribute on any block of text you want to have multiple languages. The value of this attribute is essentially an id for the block of text so you can write translations for it. You can use the same value for multiple blocks of text. For non-text elements, also add the `data-translateattribute` to specify which attribute you want to have translations for.
 
 ##### index.html
@@ -94,26 +106,15 @@
 ```
 
 
-## Functions
-- `loadTranslations('translations.json')`: Loads JSON file with translations. Takes a filename as input
-- `getLang()`: Get the current language of the page according to tinyi18n
-- `setLang('en')`: Changes the page language to a specified language. Takes a language string as input
-
-## Attributes
-- `data-translatekey="title"`: Use this on every text element you want to translate. Choose a different key for every element and add the translations for your keys in your JSON file
-- `data-translateattribute="value"`: Use this on non-text elements where you need to have translated text for an attribute value (ex. value attribute for input elements)
-
-
-## Contributing
+## 🤝 Contributing
 Contributions, issues, and forks are welcome but this is a hobby project so don't expect too much from it. [SemVer](http://semver.org/) is used for versioning.
 
 
-## License
+## 🧾 License
 This project is licensed under the Mozilla Public License 2.0. See [LICENSE](LICENSE.md) for details.
 
 
 ## 💕 Funding
-
 Find this project useful? [Sponsoring me](https://johng.io/funding) will help me cover costs and **_commit_** more time to open-source.
 
 If you can't donate but still want to contribute, don't worry. There are many other ways to help out, like:
